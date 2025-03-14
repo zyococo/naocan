@@ -14,13 +14,13 @@ export default function About() {
     {
       icon: <Store className="h-12 w-12" />,
       title: '世界初！？プリザーブド専用自販機',
-      description: '24時間365日、いつでもお好きな時間に高品質なプリザーブド仏花をお求めいただけます。',
+      description: '24時間365日、お好きな時間に高品質なプリザーブド仏花をお求めいただけます。',
       gradient: 'from-emerald-500 to-teal-600',
     },
     {
       icon: <ShoppingBag className="h-12 w-12" />,
       title: 'フローリストなおかんの全てを展示',
-      description: '当店の作品やサービスを一堂に展示。プリザーブドフラワーの魅力を存分にご覧いただけます。',
+      description: '当店の作品やサービスを一堂に展示。プリザーブドフラワーの魅力をご覧いただけます。',
       gradient: 'from-purple-500 to-indigo-600',
     },
   ];
