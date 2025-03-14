@@ -8,7 +8,7 @@ export default function About() {
     {
       icon: <Building2 className="h-12 w-12" />,
       title: '神社・仏閣での店頭販売',
-      description: '大阪市内の神社・仏閣で、心を込めて作られたプリザーブドフラワーをご提供しています。',
+      description: '関西圏の神社・仏閣で、心を込めて作られたプリザーブドフラワーをご提供しています。',
       gradient: 'from-amber-500 to-orange-600',
     },
     {
