@@ -60,7 +60,7 @@ export default function Map() {
 
   return (
     <section id="location" className="py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-2 sm:px-4 md:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -84,13 +84,13 @@ export default function Map() {
           </div>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-8 items-stretch">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 items-stretch">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="bg-white p-8 rounded-2xl shadow-lg h-full"
+            className="bg-white p-4 md:p-8 rounded-2xl shadow-lg h-full"
           >
             <div className="space-y-8">
               {contactInfo.map((info, index) => (
@@ -138,7 +138,7 @@ export default function Map() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
-            className="relative group cursor-pointer h-full"
+            className="relative group cursor-pointer h-[300px] md:h-full w-full"
             onClick={handleMapClick}
           >
             <div className="absolute -inset-4 bg-gradient-to-r from-subPink/5 to-mainPink/5 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity" />
