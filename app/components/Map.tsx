@@ -2,6 +2,23 @@
 
 import { motion } from 'framer-motion';
 import { Clock, ExternalLink, MapPin, Navigation, Phone } from 'lucide-react';
+import { ReactNode } from 'react';
+
+interface InfoContent {
+  title: string;
+  hours: string;
+}
+
+interface ContactInfo {
+  icon: ReactNode;
+  label: string;
+  type: 'text' | 'hours';
+  content: string[] | InfoContent[];
+  action?: {
+    href: string;
+    label: string;
+  };
+}
 
 export default function Map() {
   const mapUrl = "https://www.google.com/maps/place/%E3%81%AA%E3%81%8A%E3%81%8B%E3%82%93+naocan/@34.6578914,135.5633284,17z/data=!3m1!4b1!4m6!3m5!1s0x6000df6d158e535f:0x4148b8bcac00a5a!8m2!3d34.6578914!4d135.5633284!16s%2Fg%2F11pc99ny9x";
@@ -10,7 +27,7 @@ export default function Map() {
     window.open(mapUrl, '_blank', 'noopener,noreferrer');
   };
 
-  const contactInfo = [
+  const contactInfo: ContactInfo[] = [
     {
       icon: <MapPin className="h-5 w-5 text-subPink" />,
       label: "住所",
@@ -86,7 +103,7 @@ export default function Map() {
                     </h3>
                     <div className="space-y-2 text-textDark/80">
                       {info.type === "text" ? (
-                        info.content.map((item, i) => (
+                        (info.content as string[]).map((item, i) => (
                           <p key={i} className="flex items-center gap-2">
                             {item}
                             {info.action && (
@@ -100,7 +117,7 @@ export default function Map() {
                           </p>
                         ))
                       ) : (
-                        info.content.map((item: { title: string; hours: string }, i) => (
+                        (info.content as InfoContent[]).map((item, i) => (
                           <div key={i} className="flex items-start space-x-3">
                             <div>
                               <p className="text-textDark font-medium">{item.title}</p>
