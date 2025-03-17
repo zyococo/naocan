@@ -60,7 +60,7 @@ export default function Map() {
 
   return (
     <section id="location" className="py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-2 sm:px-4 md:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-0 sm:px-4 md:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -90,7 +90,7 @@ export default function Map() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="bg-white p-4 md:p-8 rounded-2xl shadow-lg h-full"
+            className="bg-white p-4 md:p-8 rounded-2xl shadow-lg h-full mx-2 sm:mx-0"
           >
             <div className="space-y-8">
               {contactInfo.map((info, index) => (
@@ -138,11 +138,11 @@ export default function Map() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
-            className="relative group cursor-pointer h-[300px] md:h-full w-full"
+            className="relative group cursor-pointer h-[300px] md:h-full w-full mx-2 sm:mx-0"
             onClick={handleMapClick}
           >
-            <div className="absolute -inset-4 bg-gradient-to-r from-subPink/5 to-mainPink/5 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity" />
-            <div className="relative h-full rounded-2xl overflow-hidden shadow-lg">
+            <div className="absolute -inset-2 sm:-inset-4 bg-gradient-to-r from-subPink/5 to-mainPink/5 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity" />
+            <div className="relative h-full rounded-xl sm:rounded-2xl overflow-hidden shadow-lg">
               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors z-10" />
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.8928528839384!2d135.56332839999998!3d34.6578914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000df6d158e535f%3A0x4148b8bcac00a5a!2z44Gq44GK44GL44KTIG5hb2Nhbg!5e0!3m2!1sja!2sjp!4v1710146433099!5m2!1sja!2sjp"
