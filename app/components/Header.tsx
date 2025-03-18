@@ -24,11 +24,11 @@ export default function Header() {
   }, []);
 
   const navItems = [
-    { name: 'HOME', href: '#' },
-    { name: 'INFO', href: '#about' },
-    { name: 'GALLERY', href: '#gallery' },
-    { name: 'LOCATION', href: '#location' },
-    { name: 'CONTACT', href: '#cta' },
+    { name: 'ホーム', href: '#' },
+    { name: '情報', href: '#about' },
+    { name: 'ギャラリー', href: '#gallery' },
+    { name: '場所', href: '#location' },
+    { name: 'お問い合わせ', href: '#contact' },
   ];
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
